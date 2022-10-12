@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SKB - Age Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="birth-date">Birth Date: <input type="date" class="dob" id="dob_input"></div>
+        <br/>
+        <div class="btn-calculate" id="calculate">Calculate</div>
+        
+        <div class="age-container"><span id="result">0</span></div>
+        <p>Development By Samzid Khan</p>
+    </div>
+    <script type="text/javascript">
+
+        document.getElementById('calculate').addEventListener("click",ageCalculate);
+
+        function ageCalculate(){
+            var dob_date = document.getElementById('dob_input').value;
+            var today = new Date();
+            var birthday = new Date(dob_date);
+                
+            var differenceInMilisecond = today.valueOf() - birthday.valueOf();
+
+            var year_age = Math.floor(differenceInMilisecond / 31536000000);
+            var day_age = Math.floor((differenceInMilisecond % 31536000000) / 86400000);           
+                
+            var month_age = Math.floor(day_age/30);                
+            day_age = day_age % 30;
+
+            console.log(day_age)
+                
+            if (isNaN(year_age) || isNaN(month_age) || isNaN(day_age)) {
+                document.getElementById('result').innerText = "Invalid birthday - Please try again!"
+            }
+            else {
+                document.getElementById('result').innerHTML = "You are<br/><span id=\"age\">" + year_age + " years " + month_age + " months " + day_age + " days</span> old";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+body{
+    background: wheat;
+}
+.container {
+    background: white;
+    width: 300px;
+    margin: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    font-family: sans-serif;
+    border-radius: 10px;
+    border: 3px solid #ffd700;
+}
+
+.birth-date .dob {
+  padding: 5px 25px;
+  border-radius: 5px;
+  border: 1px solid wheat;
+}
+
+.birth-date, .age-container {
+    text-align: center;
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.age-container {
+    margin: 40px 5px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    font-weight: bolder;
+    background: wheat;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.btn-calculate {
+    text-align: center;
+    width: 200px;
+    padding: 5px;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #999;
+    border-radius: 5px;
+    background: #FFD119;
+    text-transform: uppercase;
+}
+
+.btn-calculate:hover {
+    background: transparent;
+    transition: 0.3s;    
+}
+
+.container p {
+    text-align: center;
+}
